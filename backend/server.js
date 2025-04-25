@@ -8,18 +8,49 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'reactui_user',
+//   password: '1234',
+//   database: 'reactui_db',
+// });
+
+// const db = mysql.createConnection({
+//   host: 'nozomi.proxy.rlwy.net',
+//   user: 'root',
+//   password: 'ZiDACevkGUVbIwdUZtwVswdRLkmNALAn',
+//   database: 'railway',
+//   ssl: { rejectUnauthorized: false }, // ✅ Railway SSL 해결!
+// });
+
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'reactui_user',
-  password: '1234',
-  database: 'reactui_db',
+  host: 'nozomi.proxy.rlwy.net',  // Railway에서 제공한 host
+  port: 10904,                       // 포트 확인 (기본 3306)
+  user: 'root',                     // 유저명
+  password: 'ZiDACevkGUVbIwdUZtwVswdRLkmNALAn',             // 비밀번호
+  database: 'railway' ,         // DB 이름
+  // ssl: { rejectUnauthorized: false }, // ✅ Railway SSL 해결!
 });
 
+qms_user
+
+user: 'reactui_user',
+
+bjw_new_table
+
+인호 - cih
+미정 - kmj
+대엽 - jdy
+상준 - ksj
+정원 - bjw
+채원 - one
+진령 - kjr
+동식 - kds
+승진 - bsj
+서영 - eee
+
+
 db.connect();
-
-
-
-
 
 
 app.post('/api/survey', (req, res) => {

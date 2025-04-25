@@ -57,9 +57,11 @@ const RegisterCover = () => {
             });
     
             console.log('회원가입 성공:', response.data);
+            alert('회원가입 성공:'+response.data);
             navigate('/'); // 성공 후 홈으로 이동
         } catch (error) {
             console.error('회원가입 실패:', error);
+            alert('회원가입 실패:'+error);
         }
     };
 
